@@ -14,16 +14,18 @@ var ListItem = React.createClass({
   render: function () {
     var item = this.props.item;
     return (
+     
       <div className="panel panel-primary">
         <div className="panel-heading">
-          {item.quantity} x {item.name}
+        {item.name} 
+        <input type="number" min="1" max="9999" step="1" defaultValue="1" className="form-control" id="listItemQuantity" required ref="quantity" />
         </div>
 
         {item.description.length > 0 ? <ListItemDescription description={item.description} /> : ''}
 
         <div className="panel-footer">
           <form className="form-inline" onSubmit={this.handleSubmit}>
-            <button type="submit" className="btn btn-default btn-xs">Remove</button>
+            <button type="submit" className="btn btn-default btn-xs">Remova</button>
           </form>
         </div>
       </div>

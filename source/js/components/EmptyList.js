@@ -3,7 +3,7 @@ var React = require('react');
 var EmptyList = function () {
   return (
     <div>
-      There are no items in your list.
+      Não há itens na sua lista.
     </div>
   );
 };

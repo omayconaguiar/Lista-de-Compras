@@ -10,18 +10,18 @@ var ListHeader = React.createClass({
 
   render: function () {
     var totalNumberOfListItems = this.props.totalNumberOfListItems;
+    
 
-    if (totalNumberOfListItems > 0) {
+    if (totalNumberOfListItems != null) {
       return (
         <form onSubmit={this.handleSubmit} className="form-inline">
-          {this.props.totalNumberOfListItems} {totalNumberOfListItems === 1 ? 'item' : 'items'}
           {' '}
-          <button className="btn btn-xs btn-default" type="submit">Remove all</button>
+          <button className="btn btn-xs btn-default" type="submit">Remova todos</button>
         </form>
       );
     }
 
-    return (<span>Shopping List</span>);
+    return (<span>Lista de compras</span>);
   }
 });
 
